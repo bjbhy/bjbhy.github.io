@@ -4,7 +4,7 @@
   <subtitle><![CDATA[总有一天，我有属于我的天]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-24T03:30:05.000Z</updated>
+  <updated>2016-06-24T03:56:09.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/06/23/Hexo%E7%94%A8%E6%B3%95%E5%85%A8%E7%BA%AA%E5%BD%95/"/>
     <id>http://yoursite.com/2016/06/23/Hexo用法全纪录/</id>
     <published>2016-06-23T11:32:26.000Z</published>
-    <updated>2016-06-24T03:30:05.000Z</updated>
+    <updated>2016-06-24T03:56:09.000Z</updated>
     <content type="html"><![CDATA[<p>date: 2016-06-23 19:32:26</p>
 <h6 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h6><ol>
 <li>在mac环境下需要配置nodejs环境，到nodejs官网上下载.pkg安装包进行安装。</li>
@@ -42,8 +42,8 @@
 <p>deploy:<br> type:<br> repository:<br> branch:<br>分别填上 git github的地址 master</p>
 </li>
 </ol>
-<pre><code>**注意：** github上得仓库名必须和用户名一致
-</code></pre><h6 id="做好了一切准备，让我们开始吧"><a href="#做好了一切准备，让我们开始吧" class="headerlink" title="做好了一切准备，让我们开始吧"></a>做好了一切准备，让我们开始吧</h6><ol>
+<p>   <strong>注意：</strong> github上得仓库名必须和用户名一致</p>
+<h6 id="做好了一切准备，让我们开始吧"><a href="#做好了一切准备，让我们开始吧" class="headerlink" title="做好了一切准备，让我们开始吧"></a>做好了一切准备，让我们开始吧</h6><ol>
 <li>调用cmd cd到hexo的目录下，然后执行 hexo new “Hexo用法全纪录” 来创建一个.md文件。</li>
 <li>创建好这个md文件之后，打开MarkDown软件编辑这个.md文件，该文件的内容最终就是博文。</li>
 <li>调用命令 hexo clean 把服务器端的缓存清理一下</li>
