@@ -4,7 +4,7 @@
   <subtitle><![CDATA[总有一天，我有属于我的天]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-24T06:48:35.000Z</updated>
+  <updated>2016-06-24T06:56:14.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/06/24/%E9%9B%B7%E6%9F%8FV500S%E6%B5%8B%E8%AF%84/"/>
     <id>http://yoursite.com/2016/06/24/雷柏V500S测评/</id>
     <published>2016-06-24T06:38:21.000Z</published>
-    <updated>2016-06-24T06:48:35.000Z</updated>
+    <updated>2016-06-24T06:56:14.000Z</updated>
     <content type="html"><![CDATA[<p>我就是测试一下</p>
 ]]></content>
     <summary type="html">
@@ -27,7 +27,7 @@
 ]]>
     </summary>
     
-      <category term="键盘 鼠标" scheme="http://yoursite.com/tags/%E9%94%AE%E7%9B%98-%E9%BC%A0%E6%A0%87/"/>
+      <category term="键盘" scheme="http://yoursite.com/tags/%E9%94%AE%E7%9B%98/"/>
     
       <category term="硬件" scheme="http://yoursite.com/categories/%E7%A1%AC%E4%BB%B6/"/>
     
