@@ -4,7 +4,7 @@
   <subtitle><![CDATA[总有一天，我有属于我的天]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-28T04:32:20.000Z</updated>
+  <updated>2016-06-28T04:34:36.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/06/28/iOS%E5%9F%BA%E7%A1%80-%E5%88%AE%E5%BC%80%E6%B6%82%E5%B1%82%EF%BC%88%E5%88%AE%E5%88%AE%E4%B9%90%EF%BC%89/"/>
     <id>http://yoursite.com/2016/06/28/iOS基础-刮开涂层（刮刮乐）/</id>
     <published>2016-06-28T04:06:06.000Z</published>
-    <updated>2016-06-28T04:32:20.000Z</updated>
+    <updated>2016-06-28T04:34:36.000Z</updated>
     <content type="html"><![CDATA[<p> 先上一张效果图</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/1523603-a7463d8a756fd930.gif" alt="Mou 刮刮乐"></p>
 <p>1.设置开后的文本</p>
@@ -80,6 +80,8 @@ self.imageView.image = [UIImage imageNamed:@&quot;可达鸭&quot;];
     </summary>
     
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
