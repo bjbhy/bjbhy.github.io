@@ -4,7 +4,7 @@
   <subtitle><![CDATA[总有一天，我有属于我的天]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-30T11:11:48.000Z</updated>
+  <updated>2016-06-30T11:14:40.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://yoursite.com/2016/06/30/%E7%8E%AF%E4%BF%A1%E7%9B%B8%E5%85%B3%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%88%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%89/"/>
     <id>http://yoursite.com/2016/06/30/环信相关的东西（随手记）/</id>
     <published>2016-06-30T10:35:34.000Z</published>
-    <updated>2016-06-30T11:11:48.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="关于环信"><a href="#关于环信" class="headerlink" title="关于环信"></a>关于环信</h1><p>最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的</p>
+    <updated>2016-06-30T11:14:40.000Z</updated>
+    <content type="html"><![CDATA[<p>最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的</p>
 <hr>
 <p>不多说 首先是去集成环信  在集成第三方控件时，我一般比较喜欢使用Cocopods工具来管理我自己的额第三方软件 </p>
 <p>新建一个podFile  编辑  输入 </p>
@@ -66,9 +66,10 @@ else{
 <p>目前仅仅是一个非常简单的单聊集成，后期还会需要一些视频通话及语音聊天的功能的实现，后续再写！</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="关于环信"><a href="#关于环信" class="headerlink" title="关于环信"></a>关于环信</h1><p>最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的</p>
+    <![CDATA[<p>最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的</p>
 <hr>
-<p>不多说]]>
+<p>不多说 首先是去集成环信  在集成第三方控件时，我一般比较喜欢使用Cocopods工具来管理我自己的额第三方软件 </p>
+<p>新建一个podFile  ]]>
     </summary>
     
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
