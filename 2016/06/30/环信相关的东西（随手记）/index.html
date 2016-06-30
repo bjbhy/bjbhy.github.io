@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="一个喜欢杰伦的粉丝，一个热衷于编程的程序员，一个从不言败的北漂族。我是白浩洋，我的心愿是世界和平。"><title>环信相关的东西（随手记） | bai_XiaoBai</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.1.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.1.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">环信相关的东西（随手记）</h1><a id="logo" href="/.">bai_XiaoBai</a><p class="description">总有一天，我有属于我的天</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">环信相关的东西（随手记）</h1><div class="post-meta">Jun 30, 2016<span> | </span><span class="category"><a href="/categories/编程/">编程</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h1 id="关于环信"><a href="#关于环信" class="headerlink" title="关于环信"></a>关于环信</h1><p>最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的</p>
+<hr>
+<p>不多说 首先是去集成环信  在集成第三方控件时，我一般比较喜欢使用Cocopods工具来管理我自己的额第三方软件 </p>
+<p>新建一个podFile  编辑  输入 </p>
+<pre><code>pod &apos;HyphenateFullSDK&apos;, :git =&gt; &apos;https://github.com/easemob/hyphenate-full-cocoapods.git&apos;
+</code></pre><p>此为环信的3.x的SDK，由于本次的项目用到了实时通话和视频通话，所以我就选择了更加全面的HyphenateFullSdk </p>
+<p>用CocoPods下载完之后 编译工程，查看是否出错，如果没有出错，那么恭喜你，你的集成已经没有问题了，如果有按照官方文档去一步一步添加环信所需要的库文件。</p>
+<p>我们在用环信的IM时 需要到环信的官网上注册账号来创建一个应用，在创建完之后，环信会返回一个appKey  像这样 <img src="http://o97zrcc31.bkt.clouddn.com/QQ20160630-0.png" alt="环信AppKey"></p>
+<p>在我们测试的时候 我们可以把用户注册模式调整为开放注册。</p>
+<p>然后我们需要在AppDelegate中去初始化环信  代码如下</p>
+<pre><code>EMOptions *options = [EMOptions optionsWithAppkey:@&quot;yunjiankang#manifests&quot;];
+options.apnsCertName = @&quot;nil&quot;;//这个是上传的环信的证书名字，没有则为nil
+[[EMClient sharedClient] initializeSDKWithOptions:options];
+</code></pre><p>初始化之后 我们可以创建一个新的登录或注册类去完成登录注册</p>
+<p>登录方法如下</p>
+<pre><code>此为异步登录方法
+dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    EMError *error = [[EMClient sharedClient] loginWithUsername:@&quot;1&quot; password:@&quot;1&quot;];
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+        if (!error) {
+            NSLog(@&quot;登录成功&quot;);
+            [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@YES];
+
+        } else {
+            NSLog(@&quot;登录失败---------%@&quot;, error);
+        }
+    });
+});
+</code></pre><p> 注册方法如下</p>
+<pre><code> EMError *error = [[EMClient sharedClient] registerWithUsername:self.userTextFiled.text password:self.passwordTextFiled.text];
+if (error==nil) {
+    [[DataCenter shareInstance]showWithCustomView:self title:@&quot;注册成功&quot;];
+}
+else{
+    NSLog(@&quot;%@&quot;,error.errorDescription);
+}
+</code></pre><p>在注册完成之后可以去进行登录  登录完成之后可以创建会话内容 在3.x中用ChatViewController来创建一个会话聊天 </p>
+<p>要注意 2.x和3.x的实现类是不一样的。</p>
+<p>创建会话的代码如下</p>
+<pre><code>ChatViewController *chatController = [[ChatViewController alloc] initWithConversationChatter:_username.text conversationType:EMConversationTypeChat];
+[self.navigationController pushViewController:chatController animated:YES];
+</code></pre><p>其中里面的Chatter就是聊天的对象  也就是要聊天的另一个人的昵称  两端同时登录 即可实现聊天！</p>
+<p>目前仅仅是一个非常简单的单聊集成，后期还会需要一些视频通话及语音聊天的功能的实现，后续再写！</p>
+</div><script type="text/javascript" src="/js/share.js?v=0.1.0" async></script><a data-url="http://yoursite.com/2016/06/30/环信相关的东西（随手记）/" data-id="ciq27oog60001b6fkf9gyam2p" class="article-share-link">分享到</a><div class="tags"><a href="/tags/iOS/">iOS</a></div><div class="post-nav"><a href="/2016/06/28/iOS基础-刮开涂层（刮刮乐）/" class="next">iOS基础-刮开涂层（刮刮乐）</a></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/硬件/">硬件</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/键盘/" style="font-size: 15px;">键盘</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/30/环信相关的东西（随手记）/">环信相关的东西（随手记）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/28/iOS基础-刮开涂层（刮刮乐）/">iOS基础-刮开涂层（刮刮乐）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/雷柏V500S测评/">雷柏V500S测评</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/Hexo用法全纪录/">Hexo用法全纪录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/hello-world/">我的第一篇文章</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://blog.csdn.net/bai_xiaoibai" title="CSDN博客" target="_blank">CSDN博客</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">bai_XiaoBai.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.1.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.1.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.1.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.1.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.1.0"></script></div></body></html>
