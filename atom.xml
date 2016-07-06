@@ -4,7 +4,7 @@
   <subtitle><![CDATA[总有一天，我有属于我的天]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-30T11:14:40.000Z</updated>
+  <updated>2016-07-06T07:26:10.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[比较好的文章收集]]></title>
+    <link href="http://yoursite.com/2016/07/06/%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86/"/>
+    <id>http://yoursite.com/2016/07/06/比较好的文章收集/</id>
+    <published>2016-07-06T07:22:27.000Z</published>
+    <updated>2016-07-06T07:26:10.000Z</updated>
+    <content type="html"><![CDATA[<p>1.比较常用的 27个提升效率的iOS开源库推荐</p>
+<p><a href="http://blog.csdn.net/guojin08/article/details/47085623" target="_blank" rel="external">点此去查看原文</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>1.比较常用的 27个提升效率的iOS开源库推荐</p>
+<p><a href="http://blog.csdn.net/guojin08/article/details/47085623" target="_blank" rel="external">点此去查看原文</]]>
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+      <category term="文章" scheme="http://yoursite.com/categories/%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[环信相关的东西（随手记）]]></title>
