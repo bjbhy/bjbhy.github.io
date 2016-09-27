@@ -47,8 +47,8 @@
     <link href="http://yoursite.com/2016/07/22/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%9B%B8%E5%85%B3/"/>
     <id>http://yoursite.com/2016/07/22/环信卡片相关/</id>
     <published>2016-07-22T10:19:29.000Z</published>
-    <updated>2016-09-27T06:37:34.000Z</updated>
-    <content type="html"><![CDATA[<p>#####说一下最近集成环信的感想吧</p>
+    <updated>2016-09-27T06:39:12.000Z</updated>
+    <content type="html"><![CDATA[<p>###说一下最近集成环信的感想吧</p>
 <p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%A4%BA%E4%BE%8B.jpg" alt="环信示例图片"></p>
 <p>然后看一下最后的集成效果</p>
@@ -65,9 +65,9 @@
 <p>欢迎叨扰！！</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>#####说一下最近集成环信的感想吧</p>
+    <![CDATA[<p>###说一下最近集成环信的感想吧</p>
 <p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
-<p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A]]>
+<p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%]]>
     </summary>
     
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
@@ -228,25 +228,6 @@ self.imageView.image = [UIImage imageNamed:@&quot;可达鸭&quot;];
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
     
       <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[雷柏V500S测评]]></title>
-    <link href="http://yoursite.com/2016/06/24/%E9%9B%B7%E6%9F%8FV500S%E6%B5%8B%E8%AF%84/"/>
-    <id>http://yoursite.com/2016/06/24/雷柏V500S测评/</id>
-    <published>2016-06-24T06:38:21.000Z</published>
-    <updated>2016-06-24T06:56:14.000Z</updated>
-    <content type="html"><![CDATA[<p>我就是测试一下</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>我就是测试一下</p>
-]]>
-    </summary>
-    
-      <category term="键盘" scheme="http://yoursite.com/tags/%E9%94%AE%E7%9B%98/"/>
-    
-      <category term="硬件" scheme="http://yoursite.com/categories/%E7%A1%AC%E4%BB%B6/"/>
     
   </entry>
   
