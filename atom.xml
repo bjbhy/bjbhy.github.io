@@ -4,7 +4,7 @@
   <subtitle><![CDATA[总有一天，我有属于我的天]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-22T10:44:02.000Z</updated>
+  <updated>2016-09-27T06:35:43.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,12 +15,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[iOS数据加密]]></title>
+    <link href="http://yoursite.com/2016/09/27/iOS%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/"/>
+    <id>http://yoursite.com/2016/09/27/iOS数据加密/</id>
+    <published>2016-09-27T06:22:05.000Z</published>
+    <updated>2016-09-27T06:35:43.000Z</updated>
+    <content type="html"><![CDATA[<p>  关于数据加密的重要性，大家有目共睹，前段时间在论坛上看到，一个公司的项目的一个web被黑客破解，关键是该公司的项目中，很多重要的业务逻辑都放在了改web中去处理，造成的结果就是黑客写了一个脚本，不停的去访问该公司的服务器，服务器被卡爆。所以在此总结一下要加密时需要处理的几个重点吧！</p>
+<ul>
+<li>应用代码混淆，可参考国外开发者写的<a href="https://github.com/Polidea/ios-class-guard&quot;" target="_blank" rel="external">方案</a>，这个还有点bug，需要懂一些shell脚本。</li>
+<li>链接一定要采用https，而且绑定证书，用AFNetworking非常方便。</li>
+<li>关键的传输数据要进行数字信封（随机数加时间戳），数字摘要(md5),不对称加密(rsa)综合加固</li>
+<li>关键业务的js通过加密的方式传回客户端，客户端解密再执行</li>
+<li>对重要页面和功能进行埋点和添加时间戳，后台定义规则，发现异常的功能调用，立即进行系统报警，引起报警的设备，IP，帐号进行异常处理</li>
+<li>需要登录功能的一定要绑定设备，更换设备登陆的进行短信验</li>
+<li>对越狱的设备进行提醒和限制某些功能的使用！</li>
+</ul>
+<p>希望大家的项目都永无Bug和漏洞！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>  关于数据加密的重要性，大家有目共睹，前段时间在论坛上看到，一个公司的项目的一个web被黑客破解，关键是该公司的项目中，很多重要的业务逻辑都放在了改web中去处理，造成的结果就是黑客写了一个脚本，不停的去访问该公司的服务器，服务器被卡爆。所以在此总结一下要加密时需要处理的]]>
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
+    
+      <category term="文章" scheme="http://yoursite.com/categories/%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[环信卡片相关]]></title>
     <link href="http://yoursite.com/2016/07/22/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%9B%B8%E5%85%B3/"/>
     <id>http://yoursite.com/2016/07/22/环信卡片相关/</id>
     <published>2016-07-22T10:19:29.000Z</published>
-    <updated>2016-07-22T10:44:02.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="说一下最近集成环信的感想吧"><a href="#说一下最近集成环信的感想吧" class="headerlink" title="说一下最近集成环信的感想吧"></a>说一下最近集成环信的感想吧</h2><p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
+    <updated>2016-09-27T06:37:34.000Z</updated>
+    <content type="html"><![CDATA[<p>#####说一下最近集成环信的感想吧</p>
+<p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%A4%BA%E4%BE%8B.jpg" alt="环信示例图片"></p>
 <p>然后看一下最后的集成效果</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%A4%BA%E4%BE%8B2.png" alt="效果图"></p>
@@ -36,7 +65,9 @@
 <p>欢迎叨扰！！</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="说一下最近集成环信的感想吧"><a href="#说一下最近集成环信的感想吧" class="headerlink" title="说一下最近集成环信的感想吧"></a>说一下最近集成环信的感想吧</h2><p>自从项目中用到环信，其实还是有点纠结的，特别是本次项]]>
+    <![CDATA[<p>#####说一下最近集成环信的感想吧</p>
+<p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
+<p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A]]>
     </summary>
     
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
