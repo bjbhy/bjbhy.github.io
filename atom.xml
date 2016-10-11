@@ -47,9 +47,8 @@
     <link href="http://yoursite.com/2016/07/22/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%9B%B8%E5%85%B3/"/>
     <id>http://yoursite.com/2016/07/22/环信卡片相关/</id>
     <published>2016-07-22T10:19:29.000Z</published>
-    <updated>2016-09-27T06:39:12.000Z</updated>
-    <content type="html"><![CDATA[<p>###说一下最近集成环信的感想吧</p>
-<p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
+    <updated>2016-10-11T08:25:32.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="说一下最近集成环信的感想吧"><a href="#说一下最近集成环信的感想吧" class="headerlink" title="说一下最近集成环信的感想吧"></a>说一下最近集成环信的感想吧</h2><p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%A4%BA%E4%BE%8B.jpg" alt="环信示例图片"></p>
 <p>然后看一下最后的集成效果</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%A4%BA%E4%BE%8B2.png" alt="效果图"></p>
@@ -65,9 +64,7 @@
 <p>欢迎叨扰！！</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>###说一下最近集成环信的感想吧</p>
-<p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
-<p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%]]>
+    <![CDATA[<h2 id="说一下最近集成环信的感想吧"><a href="#说一下最近集成环信的感想吧" class="headerlink" title="说一下最近集成环信的感想吧"></a>说一下最近集成环信的感想吧</h2><p>自从项目中用到环信，其实还是有点纠结的，特别是本次项]]>
     </summary>
     
       <category term="iOS" scheme="http://yoursite.com/tags/iOS/"/>
