@@ -4,7 +4,7 @@
   <subtitle><![CDATA[总有一天，我有属于我的天]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-27T06:35:43.000Z</updated>
+  <updated>2016-10-12T04:33:43.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[iOS 性能优化记录]]></title>
+    <link href="http://yoursite.com/2016/10/12/iOS-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2016/10/12/iOS-性能优化记录/</id>
+    <published>2016-10-12T04:32:38.000Z</published>
+    <updated>2016-10-12T04:33:43.000Z</updated>
+    <content type="html"><![CDATA[<pre><code>1：应用启动时间 应用启动时，只加载启动相关的资源和必须在启动时加载的资源。
+
+2：本地图片加载方式 本地图片加载常用方法有两种： (1)，[UIImage imageNamed:@&quot;&quot;] 图片多次使用时使用，需要使用此方式加入缓存 (2)，[[UIImage alloc] initWithContentsOfFile:@&quot;&quot;] 图片不常使用时，不使用缓存
+
+3：不要阻塞主线程 开发中除了UI处理外，其它任务尽量放在后台线程加载。
+
+4：UIView (1)，如果你的View是透明的，需要设置opaque为YES。 (2)，使用UITableView和UICollectionView的重用，并缓存动态Cell的高度。 (3), 延迟加载不急需要的Views。 (4)，尽量避免代码裁剪图片，如果必须需在后台线程处理。
+
+5：缓存 缓存需要重复显示的数据，像网络请求、图片。
+
+6：避免对象创建时过多消耗资源 假设应用中多次使用到日期处理，将保持日期对象全局唯一。
+
+7：释放对象 (1)，ARC中创建对象过多时，内存会持续升高，在需要时添加自动释放池释放不需要的资源。 (2)，及时释放自己开辟的内存空间。
+
+8：防止循环引用 (1)，在头文件中尽量避免import导入头文件，使用@class 声明类，在.m文件中#import。 (2)，在设置代理/block中使用相应的关键字引用对象。
+
+9：数据存储 数据存储大致分plist、对象归档、sqlite。NSUserDefault适合存储小量数据,私密信息使用Keychain, sqlite适合大量数据，归档性能较低,尽量避免使用。
+
+10：内存警告处理 当系统发出内存警告时，释放不必要的数据的三种方式。 AppDelegate中实现applicationDidReceiveMemoryWarning UIViewController 重写didReceiveMemoryWarning 注册通知：UIApplicationDidReceiveMemoryWarningNotification
+
+11：性能检测 静态分析APP：菜单-Product-Analyze 可以定位未使用的变量，内存泄漏 分析APP每个操作占用时间: Instruments-Time profiler。 动态分析内存泄漏：Instruments-Leaks。
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<pre><code>1：应用启动时间 应用启动时，只加载启动相关的资源和必须在启动时加载的资源。
+
+2：本地图片加载方式 本地图片加载常用方法有两种： (1)，[UIImage imageNamed:@&quot;&quot;] 图片多次使用时使用，需要使用此方式加入缓存 (2]]>
+    </summary>
+    
+      <category term="文章" scheme="http://yoursite.com/tags/%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[iOS数据加密]]></title>
