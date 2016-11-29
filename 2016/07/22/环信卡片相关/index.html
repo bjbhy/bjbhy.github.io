@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="一个喜欢杰伦的粉丝，一个热衷于编程的程序员，一个从不言败的北漂族。我是白浩洋，我的心愿是世界和平。">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="bai_XiaoBai" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        环信卡片相关｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2016/07/22/环信卡片相关/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    bai_XiaoBai
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/about/">关于我</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>环信卡片相关</h1>
+                    
+                    <span class="meta">
+                         作者 白浩洋
+                        <span>
+                          日期 2016-07-22
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#iOS"
+                           title="iOS">iOS</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            环信卡片相关
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>###说一下最近集成环信的感想吧</p>
+<p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
+<p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%A4%BA%E4%BE%8B.jpg" alt="环信示例图片"></p>
+<p>然后看一下最后的集成效果</p>
+<p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%A4%BA%E4%BE%8B2.png" alt="效果图"></p>
+<p>是这样的  虽然跟最后还是有点差别 但样子差不多已经出来了，说一下思路吧 </p>
+<p>在看之前我默认你已经集成了单聊，并且知道ChatDemo3.x中的 ChatViewController是怎么用的了 好现在我们一起来做卡片吧，其实在做之前 非常的简单 你需要去环信的官方论坛去查看文档，<a href="http://docs.easemob.com/im/300iosclientintegration/85easeuiguide" target="_blank" rel="external">官方文档</a>,  直接拖到中部，然后查看聊天会话扩展板块。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">/*!</span><br><span class="line"> @method</span><br><span class="line"> @brief 获取消息自定义cell</span><br><span class="line"> @discussion 用户根据messageModel判断是否显示自定义cell。返回nil显示默认cell，否则显示用户自定义cell</span><br><span class="line"> @param tableView 当前消息视图的tableView</span><br><span class="line"> @param messageModel 消息模型</span><br><span class="line"> @result 返回用户自定义cell</span><br><span class="line"> */</span><br><span class="line">- (UITableViewCell *)messageViewController:(UITableView *)tableView</span><br><span class="line">                       cellForMessageModel:(id&lt;IMessageModel&gt;)messageModel;</span><br><span class="line"> </span><br><span class="line">/*!</span><br><span class="line"> @method</span><br><span class="line"> @brief 获取消息cell高度</span><br><span class="line"> @discussion 用户根据messageModel判断，是否自定义显示cell的高度</span><br><span class="line"> @param viewController 当前消息视图</span><br><span class="line"> @param messageModel 消息模型</span><br><span class="line"> @param cellWidth 视图宽度</span><br><span class="line"> @result 返回用户自定义cell</span><br><span class="line"> */</span><br><span class="line">- (CGFloat)messageViewController:(EaseMessageViewController *)viewController</span><br><span class="line">           heightForMessageModel:(id&lt;IMessageModel&gt;)messageModel</span><br><span class="line">                   withCellWidth:(CGFloat)cellWidth;</span><br><span class="line"> </span><br><span class="line">//具体创建自定义Cell的样例：</span><br><span class="line">- (UITableViewCell *)messageViewController:(UITableView *)tableView cellForMessageModel:(id&lt;IMessageModel&gt;)model</span><br><span class="line">&#123;</span><br><span class="line">    //样例为如果消息是文本消息显示用户自定义cell</span><br><span class="line">    if (model.bodyType == eMessageBodyType_Text) &#123;</span><br><span class="line">        NSString *CellIdentifier = [CustomMessageCell cellIdentifierWithModel:model];</span><br><span class="line">        //CustomMessageCell为用户自定义cell,继承了EaseBaseMessageCell</span><br><span class="line">        CustomMessageCell *cell = (CustomMessageCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];</span><br><span class="line">        if (cell == nil) &#123;</span><br><span class="line">            cell = [[CustomMessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier model:model];</span><br><span class="line">            cell.selectionStyle = UITableViewCellSelectionStyleNone;</span><br><span class="line">        &#125;</span><br><span class="line">        cell.model = model;</span><br><span class="line">        return cell;</span><br><span class="line">    &#125;</span><br><span class="line">    return nil;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">- (CGFloat)messageViewController:(EaseMessageViewController *)viewController</span><br><span class="line">           heightForMessageModel:(id&lt;IMessageModel&gt;)messageModel</span><br><span class="line">                   withCellWidth:(CGFloat)cellWidth</span><br><span class="line">&#123;</span><br><span class="line">    //样例为如果消息是文本消息使用用户自定义cell的高度</span><br><span class="line">    if (messageModel.bodyType == EMMessageBodyTypeText) &#123;</span><br><span class="line">        //CustomMessageCell为用户自定义cell,继承了EaseBaseMessageCell</span><br><span class="line">        return [CustomMessageCell cellHeightWithModel:messageModel];</span><br><span class="line">    &#125;</span><br><span class="line">    return 0.f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个板块中的代码复制到ChatViewController中。 由于ChatViewController继承了EaseMessageViewControllerDelegate 所以可以直接重写上部的两个方法。</p>
+<p>在自定制卡片时，需要用到自定制的Cell，在自定制的Cell中需要自己布局,包括气泡头像等控件。然后直接在- (UITableViewCell <em>)messageViewController:(UITableView </em>)tableView cellForMessageModel:(id<imessagemodel>)model中重写就可以。</imessagemodel></p>
+<p>在这里需要说一下，官方给的例子是用类型作为判断条件的，在我们自定制的时候，不能再用发送的消息类型来判断类型了，只能通过扩展字段发过来的某个字段来判断这个消息是否为卡片消息，是的话再加载卡片的样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - EaseMessageViewControllerDelegate</span><br><span class="line">- (UITableViewCell *)messageViewController:(UITableView *)tableView</span><br><span class="line">                       cellForMessageModel:(id&lt;IMessageModel&gt;)messageModel&#123;</span><br><span class="line">        //样例为如果消息是文本消息显示用户自定义cell</span><br><span class="line">  NSDictionary *dict=messageModel.message.ext;</span><br><span class="line">    NSLog(@&quot;dict1~~~~,%@&quot;,dict);</span><br><span class="line">    NSString *keys=[dict objectForKey:@&quot;content&quot;];</span><br><span class="line">    NSLog(@&quot;%@&quot;,keys);</span><br><span class="line">    if (keys.length&gt;0) &#123;</span><br><span class="line">        NSString *CellIdentifier = [XHTableViewCardCell cellIdentifierWithModel:messageModel];</span><br><span class="line">        //CustomMessageCell为用户自定义cell,继承了EaseBaseMessageCell</span><br><span class="line">        XHTableViewCardCell *cell = (XHTableViewCardCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];</span><br><span class="line">        if (cell == nil) &#123;</span><br><span class="line">            cell = [[XHTableViewCardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];</span><br><span class="line">            cell.selectionStyle = UITableViewCellSelectionStyleNone;</span><br><span class="line">        &#125;</span><br><span class="line">        //cell.model = messageModel;</span><br><span class="line">        [cell loadMainUI:messageModel];</span><br><span class="line">        return cell;</span><br><span class="line">    &#125;</span><br><span class="line">    return nil;</span><br><span class="line">&#125;</span><br><span class="line">- (CGFloat)messageViewController:(EaseMessageViewController *)viewController</span><br><span class="line">           heightForMessageModel:(id&lt;IMessageModel&gt;)messageModel</span><br><span class="line">                   withCellWidth:(CGFloat)cellWidth</span><br><span class="line">&#123;</span><br><span class="line">    //样例为如果消息是文本消息使用用户自定义cell的高度</span><br><span class="line">    NSDictionary *dict=messageModel.message.ext;</span><br><span class="line">    NSString *keys=[dict objectForKey:@&quot;content&quot;];</span><br><span class="line">    NSLog(@&quot;%@&quot;,keys);</span><br><span class="line">    if (keys.length&gt;0) &#123;</span><br><span class="line">        //CustomMessageCell为用户自定义cell,继承了EaseBaseMessageCell</span><br><span class="line">        return [XHTableViewCardCell cellHeightWithModel:messageModel];</span><br><span class="line">    &#125;</span><br><span class="line">    return 0.f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我的代码就是这样，写的不好，慢慢修改。如果有幸对你有用，并且尚有问题，可以联系我。</p>
+<p>QQ：897345401</p>
+<p>欢迎叨扰！！</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/09/27/iOS数据加密/" data-toggle="tooltip" data-placement="top"
+                           title="iOS数据加密">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/07/06/比较好的文章收集/" data-toggle="tooltip" data-placement="top"
+                           title="比较好的文章收集">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; bai_XiaoBai 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>
