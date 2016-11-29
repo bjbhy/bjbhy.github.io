@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>bai_XiaoBai</title>
-  <subtitle>总有一天，我有属于我的天</subtitle>
-  <link href="/atom.xml" rel="self"/>
+<search>
   
-  <link href="https://bjbhy.github.io/"/>
-  <updated>2016-11-29T09:32:50.000Z</updated>
-  <id>https://bjbhy.github.io/</id>
   
-  <author>
-    <name>白浩洋</name>
     
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>小知识</title>
-    <link href="https://bjbhy.github.io/2016/11/29/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    <id>https://bjbhy.github.io/2016/11/29/小知识/</id>
-    <published>2016-11-29T06:26:07.000Z</published>
-    <updated>2016-11-29T09:32:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.短信验证码倒计时</p>
+    <entry>
+      <title><![CDATA[小知识]]></title>
+      <url>https://bjbhy.github.io/2016/11/29/%E5%B0%8F%E7%9F%A5%E8%AF%86/</url>
+      <content type="html"><![CDATA[<p>1.短信验证码倒计时</p>
 <!---->
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">  __block int timeout= 59; //倒计时时间</span><br><span class="line">  dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);</span><br><span class="line">  dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);</span><br><span class="line">  dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行</span><br><span class="line">  dispatch_source_set_event_handler(_timer, ^&#123;</span><br><span class="line">    if(timeout&lt;=0)&#123; //倒计时结束，关闭</span><br><span class="line">        dispatch_source_cancel(_timer);</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            //设置界面的按钮显示 根据自己需求设置</span><br><span class="line">            [_codeButton setTitle:@&quot;获取验证码&quot; forState:UIControlStateNormal];</span><br><span class="line">            _codeButton.userInteractionEnabled = YES;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        //            int minutes = timeout / 60;</span><br><span class="line">        int seconds = timeout % 60;</span><br><span class="line">        NSString *strTime = [NSString stringWithFormat:@&quot;%.2d&quot;, seconds];</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            //设置界面的按钮显示 根据自己需求设置</span><br><span class="line">            [UIView beginAnimations:nil context:nil];</span><br><span class="line">            [UIView setAnimationDuration:1];</span><br><span class="line">            [_codeButton setTitle:[NSString stringWithFormat:@&quot;%@秒重发&quot;,strTime] forState:UIControlStateNormal];</span><br><span class="line">            [UIView commitAnimations];</span><br><span class="line">            _codeButton.userInteractionEnabled = NO;</span><br><span class="line">        &#125;);</span><br><span class="line">        timeout--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">dispatch_resume(_timer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;1.短信验证码倒计时&lt;/p&gt;
-&lt;!----&gt;
-  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;l
-    
-    </summary>
-    
-    
-      <category term="文章" scheme="https://bjbhy.github.io/tags/%E6%96%87%E7%AB%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS 性能优化记录</title>
-    <link href="https://bjbhy.github.io/2016/10/12/iOS-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/"/>
-    <id>https://bjbhy.github.io/2016/10/12/iOS-性能优化记录/</id>
-    <published>2016-10-12T04:32:38.000Z</published>
-    <updated>2016-10-12T04:35:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>1：应用启动时间 应用启动时，只加载启动相关的资源和必须在启动时加载的资源。</p>
+    <entry>
+      <title><![CDATA[iOS 性能优化记录]]></title>
+      <url>https://bjbhy.github.io/2016/10/12/iOS-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<p>1：应用启动时间 应用启动时，只加载启动相关的资源和必须在启动时加载的资源。</p>
 <p>2：本地图片加载方式 本地图片加载常用方法有两种： (1)，[UIImage imageNamed:@””] 图片多次使用时使用，需要使用此方式加入缓存 (2)，[[UIImage alloc] initWithContentsOfFile:@””] 图片不常使用时，不使用缓存</p>
 <p>3：不要阻塞主线程 开发中除了UI处理外，其它任务尽量放在后台线程加载。</p>
 <p>4：UIView (1)，如果你的View是透明的，需要设置opaque为YES。 (2)，使用UITableView和UICollectionView的重用，并缓存动态Cell的高度。 (3), 延迟加载不急需要的Views。 (4)，尽量避免代码裁剪图片，如果必须需在后台线程处理。</p>
@@ -58,27 +26,12 @@
 <p>9：数据存储 数据存储大致分plist、对象归档、sqlite。NSUserDefault适合存储小量数据,私密信息使用Keychain, sqlite适合大量数据，归档性能较低,尽量避免使用。</p>
 <p>10：内存警告处理 当系统发出内存警告时，释放不必要的数据的三种方式。 AppDelegate中实现applicationDidReceiveMemoryWarning UIViewController 重写didReceiveMemoryWarning 注册通知：UIApplicationDidReceiveMemoryWarningNotification<br>11：性能检测 静态分析APP：菜单-Product-Analyze 可以定位未使用的变量，内存泄漏 分析APP每个操作占用时间: Instruments-Time profiler。 动态分析内存泄漏：Instruments-Leaks。</p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;1：应用启动时间 应用启动时，只加载启动相关的资源和必须在启动时加载的资源。&lt;/p&gt;
-&lt;p&gt;2：本地图片加载方式 本地图片加载常用方法有两种： (1)，[UIImage imageNamed:@””] 图片多次使用时使用，需要使用此方式加入缓存 (2)，[[UIImage 
-    
-    </summary>
-    
-    
-      <category term="文章" scheme="https://bjbhy.github.io/tags/%E6%96%87%E7%AB%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS数据加密</title>
-    <link href="https://bjbhy.github.io/2016/09/27/iOS%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/"/>
-    <id>https://bjbhy.github.io/2016/09/27/iOS数据加密/</id>
-    <published>2016-09-27T06:22:05.000Z</published>
-    <updated>2016-09-27T06:35:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>  关于数据加密的重要性，大家有目共睹，前段时间在论坛上看到，一个公司的项目的一个web被黑客破解，关键是该公司的项目中，很多重要的业务逻辑都放在了改web中去处理，造成的结果就是黑客写了一个脚本，不停的去访问该公司的服务器，服务器被卡爆。所以在此总结一下要加密时需要处理的几个重点吧！</p>
+    <entry>
+      <title><![CDATA[iOS数据加密]]></title>
+      <url>https://bjbhy.github.io/2016/09/27/iOS%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/</url>
+      <content type="html"><![CDATA[<p>  关于数据加密的重要性，大家有目共睹，前段时间在论坛上看到，一个公司的项目的一个web被黑客破解，关键是该公司的项目中，很多重要的业务逻辑都放在了改web中去处理，造成的结果就是黑客写了一个脚本，不停的去访问该公司的服务器，服务器被卡爆。所以在此总结一下要加密时需要处理的几个重点吧！</p>
 <ul>
 <li>应用代码混淆，可参考国外开发者写的<a href="https://github.com/Polidea/ios-class-guard&quot;" target="_blank" rel="external">方案</a>，这个还有点bug，需要懂一些shell脚本。</li>
 <li>链接一定要采用https，而且绑定证书，用AFNetworking非常方便。</li>
@@ -90,28 +43,12 @@
 </ul>
 <p>希望大家的项目都永无Bug和漏洞！</p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;  关于数据加密的重要性，大家有目共睹，前段时间在论坛上看到，一个公司的项目的一个web被黑客破解，关键是该公司的项目中，很多重要的业务逻辑都放在了改web中去处理，造成的结果就是黑客写了一个脚本，不停的去访问该公司的服务器，服务器被卡爆。所以在此总结一下要加密时需要处理的
-    
-    </summary>
-    
-      <category term="文章" scheme="https://bjbhy.github.io/categories/%E6%96%87%E7%AB%A0/"/>
-    
-    
-      <category term="iOS" scheme="https://bjbhy.github.io/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>环信卡片相关</title>
-    <link href="https://bjbhy.github.io/2016/07/22/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%9B%B8%E5%85%B3/"/>
-    <id>https://bjbhy.github.io/2016/07/22/环信卡片相关/</id>
-    <published>2016-07-22T10:19:29.000Z</published>
-    <updated>2016-09-27T06:39:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>###说一下最近集成环信的感想吧</p>
+    <entry>
+      <title><![CDATA[环信卡片相关]]></title>
+      <url>https://bjbhy.github.io/2016/07/22/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%9B%B8%E5%85%B3/</url>
+      <content type="html"><![CDATA[<p>###说一下最近集成环信的感想吧</p>
 <p>自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%E5%8D%A1%E7%89%87%E7%A4%BA%E4%BE%8B.jpg" alt="环信示例图片"></p>
 <p>然后看一下最后的集成效果</p>
@@ -127,55 +64,20 @@
 <p>QQ：897345401</p>
 <p>欢迎叨扰！！</p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;###说一下最近集成环信的感想吧&lt;/p&gt;
-&lt;p&gt;自从项目中用到环信，其实还是有点纠结的，特别是本次项目中需要用到卡片功能 类似于这样的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o97zrcc31.bkt.clouddn.com/%E7%8E%AF%E4%BF%A1%
-    
-    </summary>
-    
-      <category term="文章" scheme="https://bjbhy.github.io/categories/%E6%96%87%E7%AB%A0/"/>
-    
-    
-      <category term="iOS" scheme="https://bjbhy.github.io/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>比较好的文章收集</title>
-    <link href="https://bjbhy.github.io/2016/07/06/%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86/"/>
-    <id>https://bjbhy.github.io/2016/07/06/比较好的文章收集/</id>
-    <published>2016-07-06T07:22:27.000Z</published>
-    <updated>2016-07-06T07:26:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.比较常用的 27个提升效率的iOS开源库推荐</p>
+    <entry>
+      <title><![CDATA[比较好的文章收集]]></title>
+      <url>https://bjbhy.github.io/2016/07/06/%E6%AF%94%E8%BE%83%E5%A5%BD%E7%9A%84%E6%96%87%E7%AB%A0%E6%94%B6%E9%9B%86/</url>
+      <content type="html"><![CDATA[<p>1.比较常用的 27个提升效率的iOS开源库推荐</p>
 <p><a href="http://blog.csdn.net/guojin08/article/details/47085623" target="_blank" rel="external">点此去查看原文</a></p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;1.比较常用的 27个提升效率的iOS开源库推荐&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/guojin08/article/details/47085623&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点此去查看原文&lt;/
-    
-    </summary>
-    
-      <category term="文章" scheme="https://bjbhy.github.io/categories/%E6%96%87%E7%AB%A0/"/>
-    
-    
-      <category term="iOS" scheme="https://bjbhy.github.io/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>环信相关的东西（随手记）</title>
-    <link href="https://bjbhy.github.io/2016/06/30/%E7%8E%AF%E4%BF%A1%E7%9B%B8%E5%85%B3%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%88%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%89/"/>
-    <id>https://bjbhy.github.io/2016/06/30/环信相关的东西（随手记）/</id>
-    <published>2016-06-30T10:35:34.000Z</published>
-    <updated>2016-06-30T11:14:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的</p>
+    <entry>
+      <title><![CDATA[环信相关的东西（随手记）]]></title>
+      <url>https://bjbhy.github.io/2016/06/30/%E7%8E%AF%E4%BF%A1%E7%9B%B8%E5%85%B3%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%88%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%89/</url>
+      <content type="html"><![CDATA[<p>最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的</p>
 <hr>
 <p>不多说 首先是去集成环信  在集成第三方控件时，我一般比较喜欢使用Cocopods工具来管理我自己的额第三方软件 </p>
 <p>新建一个podFile  编辑  输入 </p>
@@ -220,31 +122,12 @@ else{
 </code></pre><p>其中里面的Chatter就是聊天的对象  也就是要聊天的另一个人的昵称  两端同时登录 即可实现聊天！</p>
 <p>目前仅仅是一个非常简单的单聊集成，后期还会需要一些视频通话及语音聊天的功能的实现，后续再写！</p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;最近在做得项目中需要用到即时聊天，不多说，首先想到的就是环信，但真正做起来其实还是有点难度的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;不多说 首先是去集成环信  在集成第三方控件时，我一般比较喜欢使用Cocopods工具来管理我自己的额第三方软件 &lt;/p&gt;
-&lt;p&gt;新建一个podFile  
-    
-    </summary>
-    
-      <category term="编程" scheme="https://bjbhy.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="iOS" scheme="https://bjbhy.github.io/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS基础-刮开涂层（刮刮乐）</title>
-    <link href="https://bjbhy.github.io/2016/06/28/iOS%E5%9F%BA%E7%A1%80-%E5%88%AE%E5%BC%80%E6%B6%82%E5%B1%82%EF%BC%88%E5%88%AE%E5%88%AE%E4%B9%90%EF%BC%89/"/>
-    <id>https://bjbhy.github.io/2016/06/28/iOS基础-刮开涂层（刮刮乐）/</id>
-    <published>2016-06-28T04:06:06.000Z</published>
-    <updated>2016-06-28T04:34:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p> 先上一张效果图</p>
+    <entry>
+      <title><![CDATA[iOS基础-刮开涂层（刮刮乐）]]></title>
+      <url>https://bjbhy.github.io/2016/06/28/iOS%E5%9F%BA%E7%A1%80-%E5%88%AE%E5%BC%80%E6%B6%82%E5%B1%82%EF%BC%88%E5%88%AE%E5%88%AE%E4%B9%90%EF%BC%89/</url>
+      <content type="html"><![CDATA[<p> 先上一张效果图</p>
 <p><img src="http://o97zrcc31.bkt.clouddn.com/1523603-a7463d8a756fd930.gif" alt="Mou 刮刮乐"></p>
 <p>1.设置开后的文本</p>
 <pre><code>IUILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(7, 50, 400, 400)];
@@ -296,31 +179,12 @@ self.imageView.image = [UIImage imageNamed:@&quot;可达鸭&quot;];
  self.imageView.image = image;
 </code></pre><p> 其实本这个想法非常简单  想要实现刮刮乐效果 只需要在原来的Label上加上一层图片 然后获取到该图片的layer 利用触摸滑动的方法去生成这个效果。</p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt; 先上一张效果图&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o97zrcc31.bkt.clouddn.com/1523603-a7463d8a756fd930.gif&quot; alt=&quot;Mou 刮刮乐&quot;&gt;&lt;/p&gt;
-&lt;p&gt;1.设置开后的文本&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;I
-    
-    </summary>
-    
-      <category term="编程" scheme="https://bjbhy.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="iOS" scheme="https://bjbhy.github.io/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo用法全纪录</title>
-    <link href="https://bjbhy.github.io/2016/06/23/Hexo%E7%94%A8%E6%B3%95%E5%85%A8%E7%BA%AA%E5%BD%95/"/>
-    <id>https://bjbhy.github.io/2016/06/23/Hexo用法全纪录/</id>
-    <published>2016-06-23T11:32:26.000Z</published>
-    <updated>2016-06-24T03:56:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>date: 2016-06-23 19:32:26</p>
+    <entry>
+      <title><![CDATA[Hexo用法全纪录]]></title>
+      <url>https://bjbhy.github.io/2016/06/23/Hexo%E7%94%A8%E6%B3%95%E5%85%A8%E7%BA%AA%E5%BD%95/</url>
+      <content type="html"><![CDATA[<p>date: 2016-06-23 19:32:26</p>
 <h6 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h6><ol>
 <li>在mac环境下需要配置nodejs环境，到nodejs官网上下载.pkg安装包进行安装。</li>
 <li>安装完之后，在mac的磁盘上新建一个文件夹用于存储博客相关文档内容</li>
@@ -351,38 +215,17 @@ self.imageView.image = [UIImage imageNamed:@&quot;可达鸭&quot;];
 <li>调用命令 hexo deploy部署到服务器上</li>
 </ol>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;date: 2016-06-23 19:32:26&lt;/p&gt;
-&lt;h6 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h6&gt;&lt;ol&gt;
-&lt;li&gt;在mac环境下需要配置node
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>我的第一篇文章</title>
-    <link href="https://bjbhy.github.io/2016/06/23/hello-world/"/>
-    <id>https://bjbhy.github.io/2016/06/23/hello-world/</id>
-    <published>2016-06-23T08:06:46.000Z</published>
-    <updated>2016-06-23T08:58:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我是白浩洋，一个低调的人.</p>
+    <entry>
+      <title><![CDATA[我的第一篇文章]]></title>
+      <url>https://bjbhy.github.io/2016/06/23/hello-world/</url>
+      <content type="html"><![CDATA[<p>我是白浩洋，一个低调的人.</p>
 <h5 id="纪念一下2016年6月23日"><a href="#纪念一下2016年6月23日" class="headerlink" title="纪念一下2016年6月23日"></a>纪念一下2016年6月23日</h5><p>第一次使用gitHub的个人博客，感觉不错！</p>
 <h5 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h5><p>QQ:897345401 微信同号</p>
 ]]></content>
+    </entry>
     
-    <summary type="html">
-    
-      &lt;p&gt;我是白浩洋，一个低调的人.&lt;/p&gt;
-&lt;h5 id=&quot;纪念一下2016年6月23日&quot;&gt;&lt;a href=&quot;#纪念一下2016年6月23日&quot; class=&quot;headerlink&quot; title=&quot;纪念一下2016年6月23日&quot;&gt;&lt;/a&gt;纪念一下2016年6月23日&lt;/h5&gt;&lt;p&gt;第
-    
-    </summary>
-    
-    
-  </entry>
   
-</feed>
+  
+</search>
